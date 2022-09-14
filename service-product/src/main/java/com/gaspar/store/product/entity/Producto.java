@@ -1,5 +1,6 @@
 package com.gaspar.store.product.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -35,5 +36,6 @@ public class Producto {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="categoria_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     Categoria categoria;
 }

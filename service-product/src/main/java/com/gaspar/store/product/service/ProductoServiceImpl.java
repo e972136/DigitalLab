@@ -41,6 +41,8 @@ public class ProductoServiceImpl implements ProductoService{
         if(bd==null){
             return null;
         }
+        producto.setStatus(bd.getStatus());
+        producto.setCreado_en(bd.getCreado_en());
         return repository.save(producto);
     }
 
