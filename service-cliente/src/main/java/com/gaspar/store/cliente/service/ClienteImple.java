@@ -3,9 +3,11 @@ package com.gaspar.store.cliente.service;
 import com.gaspar.store.cliente.entity.Cliente;
 import com.gaspar.store.cliente.entity.Region;
 import com.gaspar.store.cliente.repository.ClienteRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ClienteImple implements ClienteService{
     private final ClienteRepository repositorio;
 
